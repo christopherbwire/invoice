@@ -1,3 +1,6 @@
+//Table medicStock has two rows, medicID and medicType
+
+
 <?php
 require_once "../config.php";
 
@@ -198,13 +201,7 @@ try
             padding: 20px;
         }
     </style>
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-
-
+    
 
     <script>
          $(document).ready(function(){
@@ -227,7 +224,7 @@ try
 
 
 
-            
+            //Adding another row after button click
             
             var count = $(".itemRow").length;
             $(document).on('click', '#addRows', function() { 
@@ -330,17 +327,6 @@ try
 
 </head>
 <body class="container">
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-        <h5 class="my-0 mr-md-auto font-weight-normal"><a href="http://localhost/albhs/admin/admin.php" class="text-dark">Al-BHS</a></h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="http://localhost/albhs/admin/cosmetics/cosmetics.php">Cosmetics</a>
-            <a class="p-2 text-dark" href="http://localhost/albhs/admin/medicines/medics.php">Medics</a>
-            <a class="p-2 text-dark" href="http://localhost/albhs/admin/mats/mats.php">Mattresses</a>
-            <a class="p-2 text-dark" href="http://localhost/albhs/admin/stock.php">Stock</a>
-            <a class="p-2 text-dark" href="http://localhost/albhs/admin/users/users.php">Users</a>
-            <a class="p-2 text-dark" href="http://localhost/albhs/logout.php" data-toggle="tooltip" data-placement="bottom" title="Log Out"><i class="fa fa-sign-out"></i></a>
-        </nav>
-    </div>
 
     <div class="pricing-header mx-auto text-center">
         <h1 class="display-8">Al-BHS | INVOIE GENERATION</h1>
@@ -351,12 +337,6 @@ try
         <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="medics-tab" data-toggle="tab" href="#medics" role="tab" aria-controls="medics" aria-selected="true">Medicines</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="cosmetics-tab" data-toggle="tab" href="#cosmetics" role="tab" aria-controls="cosmetics" aria-selected="false">Cosmetics</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="mats-tab" data-toggle="tab" href="#mats" role="tab" aria-controls="mats" aria-selected="false">Mattresses</a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -553,12 +533,6 @@ try
                 </form>
 
             </div>
-            <div class="tab-pane fade" id="cosmetics" role="tabpanel" aria-labelledby="cosmetics-tab">
-                Cosmetics Invoice
-            </div>
-            <div class="tab-pane fade" id="mats" role="tabpanel" aria-labelledby="mats-tab">
-                Mats Invoice
-            </div>
         </div>
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
@@ -566,35 +540,7 @@ try
                 <div class="col-12 col-md">
                     <small class="d-block mb-3 text-muted">&copy; <a href="#">AL-BHS</a> 2020</small>
                 </div>
-                <div class="col-6 col-md">
-                    <h5>User</h5>
-                    <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/users/users.php">Add User</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/users/users.php">Delete User</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/users/users.php">View Users</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/users/users.php">Reset Password</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Departments</h5>
-                    <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/cosmetics/cosmetics.php">Cosmetics</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/medicines/medics.php">Medicines</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/mats/mats.php">Mattresses</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/balancesheet.php">Balance Sheets</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/expenditure.php">Expenditures</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Reports</h5>
-                    <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/stock.php">Stock</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/scarce.php">Scarce Goods</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/expire.php">To Expire Items</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/sales.php">Sales</a></li>
-                    <li><a class="text-muted" href="http://localhost/albhs/admin/purchases.php">Purchases</a></li>
-                    </ul>
-                </div>
+                
             </div>
         </footer>
     </div>
